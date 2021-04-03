@@ -1,0 +1,4 @@
+1 -> pip list
+2 -> pip -v list
+3 -> pip show numpy
+4 -> pip search tesseract (it's not working due to PyPI being disabled. you can use "pip install pypisearch" and use "python -m pypisearch tesseract" instead)
