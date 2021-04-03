@@ -8,4 +8,3 @@ if len(sys.argv) == 2 and sys.argv[1].isdigit():
 		print(arr[num%2])
 else:
 	print("ERROR")
-

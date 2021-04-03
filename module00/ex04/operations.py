@@ -1,8 +1,10 @@
 import sys
 import math
+
+USAGE = "Usage: python operations.py <number1> <number2>\nExample:\n\tpython operations.py 10 3"
 if len(sys.argv) == 3:
 	if (sys.argv[1].isdigit() == False) or (sys.argv[2].isdigit() == False):
-		print("InputError: only numbers\n\nUsage: python operations.py <number1> <number2>\nExample:\n    python operations.py 10 3")
+		print("InputError: only numbers\n\n"+USAGE)
 		exit(1)
 	print("Sum:			" +  str(int(sys.argv[1]) + int(sys.argv[2])))
 	print("Difference:		" +  str(int(sys.argv[1]) - int(sys.argv[2])))
@@ -16,6 +18,6 @@ if len(sys.argv) == 3:
 	else:
 		print("Remainder:		ERROR (modulo by zero)")
 elif len(sys.argv) > 3:
-	print("InputError: too many arguments\n\nUsage: python operations.py <number1> <number2>\nExample:\n    python operations.py 10 3")
+	print("InputError: too many arguments\n\n"+USAGE)
 else:
-	print("Usage: python operations.py <number1> <number2>\nExample:\n    python operations.py 10 3")
+	print(USAGE)
