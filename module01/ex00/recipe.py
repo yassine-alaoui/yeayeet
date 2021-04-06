@@ -1,6 +1,6 @@
 class Recipe:
 
-	def	__init__(self, name, cooking_lvl, cooking_time, ingredients, recipe_type, description = ""):
+	def	__init__(self, name, cooking_lvl=None, cooking_time=None, ingredients=None, recipe_type=None, description = ""):
 		if not name:
 			print("Error\nName is empty")
 			exit(1)
@@ -12,7 +12,7 @@ class Recipe:
 			print("Error\nCooking_lvl is empty")
 			exit(1)
 		self.cooking_lvl = cooking_lvl
-		if not isinstance(Cooking_lvl, int):
+		if not isinstance(cooking_lvl, int):
 			print("Error\nCooking_lvl is not int")
 			exit(1)
 		if not cooking_time:
@@ -42,8 +42,8 @@ class Recipe:
 			exit(1)
 	
 	def __str__(self):
-		txt = "The recipe is {}\nThe cooking_lvl {}\nThe cooking_time {}\nThe ingredients".format(self.name, self.cooking_lvl, self.cooking_time, self.ingredients)
+		txt = "The recipe is {}\nThe cooking_lvl {}\nThe cooking_time {}\nThe ingredients {}\nThe recipe type {}\nThe discription {}.".format(self.name, self.cooking_lvl, self.cooking_time, self.ingredients, self.recipe_type, self.description)
 		return txt
 
-rec = Recipe("namzzze", 2,2)
+rec = Recipe("namzzze", 2, 2, ["lol"], 'll', "lol")
 print(rec)
